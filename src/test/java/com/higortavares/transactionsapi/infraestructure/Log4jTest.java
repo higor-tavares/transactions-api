@@ -1,11 +1,11 @@
 package com.higortavares.transactionsapi.infraestructure;
 
-import lombok.extern.slf4j.Slf4j;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.junit.jupiter.api.Test;
 
-@Slf4j
 class Log4jTest {
-
+  private static final Logger log = LogManager.getLogger("HelloWorld");
   @Test
   void shouldLogHello() {
     log.info("Hello world!");
