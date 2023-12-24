@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class TransactionPersistence {
   private final TransactionRepository repository;
+
   public Transaction save(Transaction transaction) {
     this.repository.save(transaction);
     return Transaction.builder().id(UUID.randomUUID().toString()).build();
