@@ -1,10 +1,15 @@
 package com.higortavares.transactionsapi.persistence;
 
 import com.higortavares.transactionsapi.domain.model.Transaction;
+import java.util.Collections;
 import java.util.List;
+import org.springframework.stereotype.Component;
 
-public interface TransactionRepository {
-  void save(Transaction transaction);
+@Component
+public class TransactionRepository {
+  void save(Transaction transaction) {}
 
-  List<Transaction> findAll();
+  List<Transaction> findAll() {
+    return Collections.emptyList();
+  }
 }
